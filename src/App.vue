@@ -25,7 +25,7 @@ export default {
 
     methods: {
         getMovies() {
-            const options = {
+            const optionsMovies = {
                 method: 'GET',
                 url: this.store.apiUrl,
                 params: {
@@ -41,9 +41,9 @@ export default {
                 }
             };
 
-            axios.request(options).then(risultato => {
+            axios.request(optionsMovies).then(risultato => {
                 this.store.films = risultato.data.results;
-                console.log(risultato.data);
+                console.log("Risultato1", risultato.data);
                 this.store.searchFilm = "";
                 console.log("Risultato ricerca per film: ", risultato.data);
             }).catch(error => {
@@ -51,10 +51,7 @@ export default {
                 console.error("Errore");
             });
 
-        },
-
-        getSeries() {
-            const options = {
+            const optionsSeries = {
                 method: 'GET',
                 url: this.store.apiUrl2,
                 params: {
@@ -70,20 +67,25 @@ export default {
                 }
             };
 
-            axios.request(options).then(risultato => {
+            axios.request(optionsSeries).then(risultato => {
                 this.store.series = risultato.data.results;
-                console.log(risultato.data);
+                console.log("Risultato2", risultato.data);
                 this.store.searchSeries = "";
-                console.log("Risultato ricerca per film: ", risultato.data);
+                console.log("Risultato ricerca per serie: ", risultato.data);
             }).catch(error => {
                 this.store.series = [];
                 console.error("Errore");
             });
 
-        }
+        },
 
-    },
+
+
+
+    }
+
 }
+
 
 
 </script>
