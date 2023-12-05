@@ -15,7 +15,7 @@ export default {
 
     data() {
         return {
-            store
+            store,
         }
     },
 
@@ -58,7 +58,7 @@ export default {
                     include_adult: 'false',
                     language: 'it-IT',
                     page: '1',
-                    query: encodeURI(this.store.searchSerie),
+                    query: encodeURI(this.store.searchFilm),
                     api_key: this.store.apiKey
                 },
                 headers: {

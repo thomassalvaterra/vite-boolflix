@@ -5,7 +5,6 @@ export default {
     props: {
         film: "",
     }
-
 }
 </script>
 
