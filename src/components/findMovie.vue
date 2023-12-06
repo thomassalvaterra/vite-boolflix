@@ -39,6 +39,7 @@ export default {
 
 .cardWrapper {
     position: relative;
+    margin: 2rem 0;
 }
 
 .cardPoster {
@@ -54,6 +55,7 @@ export default {
     background-color: black;
     border: 1px solid black;
     opacity: 0.6;
+    overflow: auto;
 }
 
 .cardWrapper:hover .cardInfo {
@@ -82,5 +84,9 @@ export default {
     display: flex;
     justify-content: center;
     margin: 20px;
+}
+
+.filled {
+    color: orange;
 }
 </style>

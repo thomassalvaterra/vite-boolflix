@@ -131,6 +131,20 @@ header {
     flex-shrink: 0;
 }
 
+.container::-webkit-scrollbar {
+    width: 16px;
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: black;
+    border-radius: 100px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 100px;
+}
+
 .box {
     width: 80%;
     margin: 4rem auto;
