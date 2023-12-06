@@ -94,9 +94,15 @@ export default {
         <getFilm @search="getMovies" />
     </header>
     <main>
+        <div class="box">
+            <h1>Films List</h1>
+        </div>
         <section class="container">
             <findMovie v-for="movie in store.films" :film="movie" />
         </section>
+        <div class="box">
+            <h1>TV Series List</h1>
+        </div>
         <section class="container">
             <findSerie v-for="series in store.series" :serie="series" />
         </section>
@@ -117,12 +123,16 @@ header {
 
 .container {
     width: 80%;
-    height: 40vh;
+    /* height: 40vh; */
     margin: 2rem auto;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
     overflow: auto;
     flex-shrink: 0;
+}
+
+.box {
+    width: 80%;
+    margin: 4rem auto;
 }
 </style>
